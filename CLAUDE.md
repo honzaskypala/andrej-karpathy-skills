@@ -73,7 +73,8 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 When the user gives any long-running task estimated to take 15 minutes or more (a crawl, a download, a build, a
 migration…), start monitoring together with it: a recurring check every 10 minutes that tells the user the
-progress – phase, how much is done, how much remains and the estimated end. When the task ends, check its result
+progress – phase, how much is done, how much remains and the estimated end. The estimate of the remaining time
+should rather be pessimistic than optimistic (round up, allow for slower phases and retries). When the task ends, check its result
 (errors, warnings, totals in the log), summarise it and stop the recurring check.
 
 How: right after launching the task, schedule a recurring job (CronCreate, an off-minute such as
