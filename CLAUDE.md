@@ -60,6 +60,27 @@ For multi-step tasks, state a brief plan:
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
+## 5. Code Language
+
+**Code is written in English, whatever language we talk in.**
+
+- All variables in code must be named in English.
+- All comments in code must be in English.
+
+## 6. Long-running Tasks
+
+**Report progress every 10 minutes.**
+
+When the user gives any long-running task estimated to take 15 minutes or more (a crawl, a download, a build, a
+migration…), start monitoring together with it: a recurring check every 10 minutes that tells the user the
+progress – phase, how much is done, how much remains and the estimated end. When the task ends, check its result
+(errors, warnings, totals in the log), summarise it and stop the recurring check.
+
+How: right after launching the task, schedule a recurring job (CronCreate, an off-minute such as
+`3-59/10 * * * *`) whose prompt runs a small status script (e.g. parsing the task's log) and reports in the user's
+language; delete the job when the task is finished. Mention that the schedule lives only in the current Claude
+session.
+
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
