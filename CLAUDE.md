@@ -82,6 +82,14 @@ How: right after launching the task, schedule a recurring job (CronCreate, an of
 language; delete the job when the task is finished. Mention that the schedule lives only in the current Claude
 session.
 
+## 7. Code Review
+
+**One finding at a time.**
+
+When we do a code review, don't present all findings at once. Present one finding, discuss it with the user, and
+either resolve it (fix it) or reject it – only then move on to the next one. Order them most severe first and say
+how many remain (e.g. "2 of 5").
+
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
