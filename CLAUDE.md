@@ -90,6 +90,14 @@ When we do a code review, don't present all findings at once. Present one findin
 either resolve it (fix it) or reject it – only then move on to the next one. Order them most severe first and say
 how many remain (e.g. "2 of 5").
 
+## 8. Version Control
+
+**Never commit or push on your own initiative.**
+
+In any version control system (Git, Mercurial, SVN, …), always ask the user for confirmation before every action
+that records changes or sends them elsewhere – a commit, a push, a check-in, a submit – and wait for a clear yes. An
+approval applies only to that one action – it does not carry over to later ones.
+
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
