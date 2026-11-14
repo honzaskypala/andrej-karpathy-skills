@@ -98,6 +98,21 @@ In any version control system (Git, Mercurial, SVN, …), always ask the user fo
 that records changes or sends them elsewhere – a commit, a push, a check-in, a submit – and wait for a clear yes. An
 approval applies only to that one action – it does not carry over to later ones.
 
+## 9. Local Setup
+
+**Setup-specific details go to CLAUDE.local.md.**
+
+Anything that applies only to the user's own development setup (tool paths not on PATH, connected hardware, USB
+quirks, gitignored local files, local branches, credentials/auth setup) belongs in the project's `CLAUDE.local.md` (gitignored), not in the shared `CLAUDE.md`. Where the
+shared file needs to mention it, use a generic phrase there and keep the specifics in `CLAUDE.local.md`.
+
+## 10. Communication
+
+**Czech, plain.**
+
+- Talk to the user in Czech; code, comments, identifiers and log/status messages stay in English (see section 5).
+- No flattery, no superlatives.
+
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
